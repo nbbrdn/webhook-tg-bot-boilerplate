@@ -26,6 +26,16 @@ pip install -r requirements-dev.txt
 pre-commit install
 ```
 
+## Dockerize
+
+Create the Docker image:
+
+```bash
+docker build -t telegram-bot .
+```
+
+You can check if the Docker image is created using `docker images` command.
+
 ## Useful Resources
 
 [Setting Up ngrok on WSL2. Linux & Windows](https://create.hashnode.dev/setting-up-ngrok-on-wsl2-linux-windows)

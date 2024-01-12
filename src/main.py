@@ -2,14 +2,13 @@ import logging
 import sys
 from os import getenv
 
-from aiohttp import web
-
 from aiogram import Bot, Dispatcher, Router, types
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram.utils.markdown import hbold
 from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
+from aiohttp import web
 
 TOKEN = getenv("BOT_TOKEN")
 
@@ -36,7 +35,8 @@ async def echo_handler(message: types.Message) -> None:
     """
     Handler will forward receive a message back to the sender
 
-    By default, message handler will handle all message types (like text, photo, sticker etc.)
+    By default, message handler will handle all message
+    types (like text, photo, sticker etc.)
     """
     try:
         await message.send_copy(chat_id=message.chat.id)
